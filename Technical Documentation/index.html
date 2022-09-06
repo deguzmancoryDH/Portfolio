@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheets" href="styles.css">
+</head>
+<body>
+<nav id="navbar" aria-label="Main Navigation">
+    <header><h1 id="navHeader">A Very Short Introduction to <span>Accessibility</span></h1></header>
+    <ul>
+      <li><a class="nav-link" href="#Overview">Overview</a></li>
+      <li class="dropdown"><a class="nav-link" href="#Types_of_Disability">Types of Disability</a>
+        <div class="submenu">
+          <a class="dropdown-content" href="#visualImp">Visual impairments</a>
+          <a class="dropdown-content" href="#hearingImp">Hearing impairments</a>
+          <a class="dropdown-content" href="#mobilityImp">Mobility impairments</a>
+          <a class="dropdown-content" href="#cognitiveImp">Cognitive impairments</a>  
+        </div>  
+      </li>
+      <li><a class="nav-link" href="#Implementing_accessibility">Implementing accessibility</a></li>
+      <li class="dropdown"><a class="nav-link" href="#HTML_accessibility">HTML accessibility</a>
+        <div class="submenu">
+          <a class="dropdown-content" href="#guidelines">General guidelines</a>
+        </div>
+      </li>
+      <li><a class="nav-link" href="#CSS_best_practices">CSS best practices</a>
+      </li>
+      <li><a class="nav-link" href="#Javascript_-_A_few_words">Javascript - A few words</a></li>
+      <li><a class="nav-link" href="#Reference">Reference</a></li>
+    </ul> 
+  </nav>
+  
+  <main id="main-doc">
+    <div id="headerSmall">
+      <h1>A Very Short Introduction to <span>Accessibility</span></h1>
+      <span class="fa-solid fa-universal-access fa-3x icon" aria-hidden="true"></span>
+    </div>
+    <section class="main-section" id="Overview">
+      <header><h2>Overview</h2></header>
+      <p>Accessibility is the practice of making your websites usable by as many people as possible. We traditionally think of this as being about people with disabilities, but the practice of making sites accessible also benefits other groups such as those using mobile devices, or those with slow network connections.</p>
+       <p>You might also think of accessibility as treating everyone the same, and giving them equal opportunities, no matter what their ability or circumstances. Just as it is wrong to exclude someone from a physical building because they are in a wheelchair (modern public buildings generally have wheelchair ramps or elevators), it is also not right to exclude someone from a website because they have a visual impairment. We are all different, but we are all human, and therefore have the same human rights.</p>
+       <p>Accessibility is the right thing to do. Providing accessible sites is part of the law in some countries, which can open up some significant markets that otherwise would not be able to use your services or buy your products.</p>
+   </section>
+    
+    <section class="main-section" id="Types_of_Disability">
+      <header><h2>Types of Disability</h2></header>
+      <p>People with disabilities are just as diverse as people without disabilities, and so are their disabilities. The key lesson here is to think beyond your own computer and how you use the web, and start learning about how others use it — you are not your users. The main types of disability to consider are explained below, along with any special tools they use to access web content (known as assistive technologies, or ATs).</p>
+  
+       <h3 id="visualImp">Visual impairments</h3>
+         <p>People with visual impairments include people with blindness, low-level vision, and color blindness. Many people with visual impairments use screen magnifiers that are either physical magnifiers or software zoom capabilities. Most browsers and operating systems these days have zoom capabilities. Some users will rely on screen readers, which is software that reads digital text aloud.</p>
+       <p>It is a good idea to familiarize yourself with screen readers; you should also set up a screen reader and have a play around with it, to get an idea of how it works.</p>
+      
+       <h3 id="hearingImp">Hearing impairments</h3>
+         <p>Deaf and hard-of-hearing (DHH) people have various levels of hearing loss ranging from mild to profound. Although some do use AT (see Assistive Devices for People with Hearing, Voice, Speech, or Language Disorders), they are not widespread.</p>
+          <p>To provide access, textual alternatives must be provided. Videos should be manually captioned, and transcripts should be provided for audio content. Furthermore, due to high levels of language deprivation in DHH populations, text simplification should be considered.</p>
+          <p>Deaf and hard-of-hearing people also represent a significant userbase — "466 million people worldwide have disabling hearing loss", says the World Health Organization's Deafness and hearing loss fact sheet.</p>
+      
+       <h3 id="mobilityImp">Mobility impairments</h3>
+         <p>These people have disabilities concerning movement, which might involve purely physical issues (such as loss of limb or paralysis), or neurological/genetic disorders that lead to weakness or loss of control in limbs. Some people might have difficulty making the exact hand movements required to use a mouse, while others might be more severely affected, perhaps being significantly paralyzed to the point where they need to use a head pointer to interact with computers.</p>
+       <p>This kind of disability can also be a result of old age, rather than any specific trauma or condition, and it could also result from hardware limitations — some users might not have a mouse.</p>
+       <p>The way this usually affects web development work is the requirement that controls be accessible by the keyboard so it is a good idea to try out some websites using just the keyboard to see how you get on.</p>
+      
+       <h3 id="cognitiveImp">Cognitive impairments</h3>
+        <p>Cognitive impairment refers to a broad range of disabilities, from people with intellectual disabilities who have the most-limited capabilities, to all of us as we age and have difficulty thinking and remembering. The range includes people with mental illnesses, such as depression and schizophrenia. It also includes people with learning disabilities, such as dyslexia and attention deficit hyperactivity disorder. Importantly, though there is a lot of diversity within clinical definitions of cognitive impairments, people with them experience a common set of functional problems. These include difficulty with understanding content, remembering how to complete tasks, and confusion caused by inconsistent webpage layouts.</p>
+       <p>A good foundation of accessibility for people with cognitive impairments includes:</p>
+         <ul>
+           <li>Delivering content in more than one way, such as by text-to-speech or by video.</li>
+           <li>Easily understood content, such as text written using plain-language standards.</li>
+           <li>Focusing attention on important content.</li>
+           <li>Minimizing distractions, such as unnecessary content or advertisements.</li>
+           <li>Consistent webpage layout and navigation.</li>
+           <li>Familiar elements, such as underlined links blue when not visited and purple when visited.</li>
+           <li>Dividing processes into logical, essential steps with progress indicators.</li>
+           <li>Website authentication as easy as possible without compromising security.</li>
+           <li>Making forms easy to complete, such as with clear error messages and simple error recovery.</li>
+       </ul>
+    </section>
+   
+    <section class="main-section" id="Implementing_accessibility">
+      <header><h2>Implementing accessibility</h2></header>
+       <ul>
+         <li>Consider accessibility from the start of a project, and test early and often. Just like any other bug, an accessibility problem becomes more expensive to fix the later it is discovered.</li>
+         <li>Bear in mind that a lot of accessibility best practices benefit everyone, not just users with disabilities. For example, lean semantic markup is not only good for screen readers, but it is also fast to load and performant. This benefits everyone, especially those on mobile devices and/or slow connections.</li>
+         <li>Publish an accessibility statement on your site and engage with people having problems.</li>
+       </ul>
+    </section>
+    
+    <section class="main-section" id="HTML_accessibility">
+      <header><h2>HTML accessibility</h2></header>
+       <p>A great deal of web content can be made accessible just by making sure the correct Hypertext Markup Language elements are used for the correct purpose at all times.</p>
+       <p>You might wonder why this is so important. After all, you can use a combination of CSS and JavaScript to make just about any HTML element behave in whatever way you want. For example, a control button to play a video on your site could be marked up like this:</p>
+       <pre><code class="block">&lt;div&gt;Play video&lt;/div&gt;</code></pre>
+       <p>But it makes sense to use the correct element for the job:</p>
+       <pre><code class="block">&lt;button&gt;Play video&lt;/button&gt;</code></pre>
+  
+       <p>Not only do HTML buttons have some suitable styling applied by default (which you will probably want to override), they also have built-in keyboard accessibility — users can navigate between buttons using the <kbd>Tab</kbd> key and activate their selection using <kbd>Return</kbd> or <kbd>Enter</kbd>.</p>
+      
+       <h3 id="guidelines">General guidelines</h3>
+       <ul>
+         <li>Semantic HTML means using correct HTML elements for their correct purpose as much as possible. Semantic elements are elements with a meaning, such as <code>&lt;form&gt;</code>, <code>&lt;table&gt;</code> and <code>&lt;article&gt;</code>, instead of a <code>&lt;span&gt;</code> or a <code>&lt;div&gt;</code>.</li>
+         <li>It is important to use headings to show the document structure and the relationships between different sections. The different types of heading specify the outline of the page. <code>&lt;h1&gt;</code> headings should be used for main headings, followed by <code>&lt;h2&gt;</code> headings, then the less important <code>&lt;h3&gt;</code>, and so on.</li>
+         <li>The <code>alt</code> attribute provides an alternate text for an image, if the user for some reason cannot view it. The value of the <code>alt</code> attribute should describe the image.</li>
+         <li>You should always include the <code>lang</code> attribute inside the <code>&lt;html&gt;</code> tag, to declare the language of the Web page. This is meant to assist search engines and browsers.</li>
+         <li>Always use clear language, that is easy to understand. Also try to avoid characters that cannot be read clearly by a screen reader such as dashes.</li>
+         <li>Create good link text. A link text should explain clearly what information the reader will get by clicking on that link.</li>
+         <li>Provide labels to identify all form controls, including text fields, checkboxes, radio buttons, and drop-down menus. In most cases, this is done by using the <code>&lt;label&gt;</code> element. Labels need to describe the purpose of the form control which should be associated with each other either implicitly or explicitly.</li>
+       </ul>
+    </section>
+    
+   <section class="main-section" id="CSS_best_practices">
+     <header><h2>CSS best practices</h2></header>
+       <ul>
+         <li>Select sensible font sizes, line heights, letter spacing, etc. to make your text logical, legible, and comfortable to read.</li>
+         <li>Make sure your headings stand out from your body text, typically big and bold like the default styling. Your lists should look like lists.</li>
+         <li>When choosing a color scheme for your website, make sure that the text (foreground) color contrasts well with the background color. Your design might look cool, but it is no good if people with visual impairments like color blindness can't read your content.</li>
+         <li> Do not rely on color alone for signposts/information, as this will be no good for those who can't see the color. Instead of marking required form fields in red, for example, mark them with an asterisk and in red.</li>
+         <li>For links the standard link conventions are underlined and a different color (default: blue) in their standard state, another color variation when the link has previously been visited (default: purple), and yet another color when the link is activated (default: red). In addition, the mouse pointer changes to a pointer icon when links are moused over, and the link receives a highlight when focused (e.g. via tabbing) or activated.</li>
+         <li>Most of the CSS you'll write for forms will be for sizing the elements, lining up labels and inputs, and getting them looking neat and tidy. You shouldn't however deviate too much from the expected visual feedback form elements receive when they are focused, which is basically the same as links. You could style form focus/hover states to make this behavior more consistent across browsers or fit in better with your page design, but don't get rid of it altogether — again, people rely on these clues to help them know what is going on.</li>
+         <li>Table CSS generally serves to make the table fit better into your design and look less ugly. It is a good idea to make sure the table headers stand out (normally using bold), and use zebra striping to make different rows easier to parse.</li>
+       </ul>
+    </section>
+       
+   <section class="main-section" id="Javascript_-_A_few_words">
+     <header><h2>Javascript - A few words</h2></header>
+        <p>JavaScript can also break accessibility, depending on how it is used. Modern JavaScript is a powerful language, and we can do so much with it these days, from simple content and UI updates to fully-fledged 2D and 3D games. There is no rule that says all content has to be 100% accessible to all people — you just need to do what you can, and make your apps as accessible as possible.</p>
+       <p>The problem often comes when people rely on JavaScript too much. Sometimes you'll see a website where everything has been done with JavaScript — the HTML has been generated by JavaScript, the CSS has been generated by JavaScript, etc. This has all kinds of accessibility and other issues associated with it, so it is not advised.</p>
+       <p>You should keep unobtrusive JavaScript in mind when creating your content. The idea of unobtrusive JavaScript is that it should be used wherever possible to enhance functionality, not build it in entirely — basic functions should ideally work without JavaScript, although it is appreciated that this is not always an option. But again, a large part of it is using built-in browser functionality where possible.</p>
+   </section>
+   
+   <section class="main-section" id="Reference">
+     <header><h2>Reference</h2></header>
+       <p>All the information on this page was taken from the following sources:</p>
+       <ul>
+         <li><a class="reference" href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility" target="_blank">MDN Web Docs - What is accessibility?</a></li>
+         <li><a class="reference" href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML" target="_blank">MDN Web Docs - HTML: A good basis for accessibility</a></li>
+         <li><a class="reference" href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/CSS_and_JavaScript" target="_blank">MDN Web Docs - CSS and JavaScript accessibility best practices</a></li>
+         <li><a class="reference" href="https://www.w3schools.com/html/html_accessibility.asp" target="_blank">W3Schools - HTML Accessibility</a></li>
+         <li><a class="reference" href="https://www.w3.org/WAI/tutorials/forms/labels/" target="_blank">W3C - Labeling Controls</a></li>
+       </ul>
+   </section>
+  </main>
+  </body>
+  </html>

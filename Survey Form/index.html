@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utc-8">
+        <title>freeCodeCamp Survey Form</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1 id="title">freeCodeCamp Survey Form</h1>
+        <p id="description">Thank you for taking the time to help us improve the platform</p>
+        <fieldset>
+            <form id="survey-form">
+                <label id="name-label">Name <input id="name" type="text" placeholder="Name" required></label>
+                <label id="email-label">Email <input id="email" type="email" placeholder="Email" required></label>
+                <label id="number-label">Age (optional) <input id="number" type="number" min="16" max="99" placeholder="Age" required></label>
+
+                <label>Which option best describes your current role?
+                    <select id="role" type="dropdown">
+                        <option value="option-currentRole">Select current role</option>
+                        <option value="option-student">Student/option>
+                        <option value="option-fullTimeJob">Full Time Job</option>
+                        <option value="option-fullTimeLearner">Full Time Learner</option>
+                        <option value="option-preferNotToSay">Prefer not to say</option>
+                        <option value="option-other">Other</option>
+                    </select>
+                </label>
+
+                <label>Would you recommend freeCodeCamp to a friend?
+                    <label><input type="radio" value="definitely" name="radio" class="inline"> Definitely</label>
+                    <label><input type="radio" value="maybe" name="radio" class="inline"> Maybe</label>
+                    <label><input type="radio" value="not-sure" name="radio" class="inline"> Not Sure</label>
+                </label>
+
+                <label>What is your favorite feature of freeCodeCamp?
+                    <select id="dropdown" type="dropdown">
+                        <option value="option-select">Select an option</option>
+                        <option value="option-challenges">Challenges</option>
+                        <option value="option-projects">Projects</option>
+                        <option value="option-community">Community</option>
+                        <option value="option-openSource">Open Source</option>
+                    </select>
+                </label>
+
+                <label>What would you like to see improved? (Check all that apply)
+                    <label><input type="checkbox" value="frontEntProjects" name="improved" class="inline" /> Front-end Projects</label>
+                    <label><input type="checkbox" value="backEndProjects"  name="improved" class="inline"/> Back-end Projects</label>
+                    <label><input type="checkbox" value="dataVisualization"  name="improved" class="inline" /> Data Visualization</label>
+                    <label><input type="checkbox" value="challenges"  name="improved" class="inline" /> Challenges</label>
+                    <label><input type="checkbox" value="openSourceCommunity"  name="improved" class="inline" /> Open Source Community</label>
+                    <label><input type="checkbox" value="gitterHelpRooms"  name="improved" class="inline" /> Gitter help rooms</label>
+                    <label><input type="checkbox" value="videos"  name="improved" class="inline" /> Videos</label>
+                    <label><input type="checkbox" value="cityMeetups"  name="improved" class="inline" /> City Meetups</label>
+                    <label><input type="checkbox" value="wiki"  name="improved" class="inline" /> Wiki</label>
+                    <label><input type="checkbox" value="forum"  name="improved" class="inline" /> Forum</label>
+                    <label><input type="checkbox" value="additionalCourses"  name="improved" class="inline" /> Additional Courses</label>
+                </label>
+
+                <label>Any comments or suggestions?
+                    <textarea id="comments" placeholder="Enter your comment here..." rows="3" cols="30"></textarea>
+                </label>
+
+                <input type="submit" id="submit" value="Submit" />
+            </form>
+
+        </fieldset>
+    </body>
+</html>

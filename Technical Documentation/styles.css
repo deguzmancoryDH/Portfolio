@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans&family=PT+Serif&display=swap');
+
+:root {
+  font-family: Cambria, serif;
+  --off-white: #f9f9f9;
+  --navy-blue: #0B0B45;
+  --green: #2EC4B6;
+  --red: #E71D36;
+  --orange: #FF9F1C;
+  --grey: #BDBDBD;}
+
+/*General styling*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background-color: var(--off-white);
+}
+
+/*Accessibility custom properties*/
+
+:is(a, button, input, textarea, summary) {
+  --outline-size: max(2px, 0.08em);
+  --outline-style: solid;
+  --outline-color: currentColor;
+}
+
+:is(a, button, input, textarea, summary):focus {
+  outline: var(--outline-size) var(--outline-style) var(--outline-color);
+  outline-offset: var(--outline-offset, var(--outline-size));
+}
+
+:is(a, button, input, textarea, summary):focus-visible {
+  outline: var(--outline-size) var(--outline-style) var(--outline-color);
+  outline-offset: var(--outline-offset, var(--outline-size));
+}
+
+:is(a, button, input, textarea, summary):focus:not(:focus-visible) {
+  outline: none;
+}
+
+/*end of Accessibility custom properties*/
+
+main {padding: 1rem 1rem 1rem 2rem;}
+
+span {color: var(--red);}
+
+/*No navigation sidebar in smaller screens*/
+
+nav {display: none;}
+
+/*Header for smaller screens*/
+
+#headerSmall {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  line-height: 2.5rem;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  font-size: 1.9rem;
+}
+
+.icon {
+  color: var(--navy-blue);
+  padding: 1rem 0 1rem 0.5rem;
+}
+
+/*Styling of content area*/
+
+section {
+  padding-top: 1.5rem;
+  line-height: 1.85rem;
+  font-size: 1.1rem;
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.65rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1.2rem;
+}
+
+p {
+  padding-bottom: 1.1rem;
+  max-width: 55rem;
+}
+
+h3 {
+  color: var(--red);
+  font-size: 1.45rem;
+  padding-top: 1.8rem;
+  padding-bottom: 1.2rem;
+}
+
+ul {padding-left: 2rem;}
+
+li {padding-bottom: 0.7rem;}
+
+code {
+  font-size: 0.96rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--grey);
+}
+
+.block {
+  display: block;
+  text-align: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+kbd {
+  border: 2px var(--grey) solid;
+  border-radius: 0.3rem;
+  padding: 0.23rem;
+  box-shadow: 0 -1px 0 0 inset var(--grey);
+}
+
+.reference:link {color: blue;}
+.reference:visited {color: var(--red);}
+.reference:hover {color: var(--navy-blue);}
+
+/*Navigation sidebar for larger screens*/
+
+@media (min-width: 769px) {
+  #headerSmall {display: none;}
+  
+  #navbar {
+    display: inherit;
+    position: fixed;
+    overflow-y: scroll;
+    left: 1.5rem;
+    height: 100%;
+    min-width: 230px;
+    max-width: 250px;
+    border-right: 2px solid var(--grey);
+  }
+  
+  #navbar ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #navbar li {
+    display: block;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    list-style: none;
+    border-top: 1px solid var(--grey);
+  }
+  
+  #navbar a {
+    display: block;
+    text-decoration: none;
+    color: var(--navy-blue);
+  }
+  
+  #navbar a:not(.dropdown-content) {
+    font-size: 1.12rem;}
+  
+  .dropdown {position: relative;}
+ 
+  .submenu {
+    display: none;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 11.65rem;
+  }
+  
+  .submenu a {
+    background-color: #f1f1f1;
+    padding: 0.75rem 1rem;
+    display: block;
+    font-size: 0.99rem;
+  }
+  
+  .submenu a:hover {background-color: #ddd;}
+  .dropdown:hover .submenu {display: block;}
+  
+  .submenu a:focus-within {background-color: #ddd;}
+  .dropdown:focus-within .submenu {display: block;}
+  
+  #navHeader {font-size: 1.7rem;}
+  
+  main {
+    margin-left: 290px;
+    padding-right: 2rem;
+  }
+  
+ /* Hide scrollbar for Chrome, Safari and Opera */ 
+  nav::-webkit-scrollbar {display: none;}
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  nav {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  }
+}

@@ -3,21 +3,125 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <title>Personal Portfolio</title>
 </head>
 
 <body>
-  <div class="hero">
-    <section id="welcome-section">
+<!--BEGIN NAV-->
+    <nav id="navbar" class="nav">
+        <ul class="nav-list">
+            <li>
+                <a href="#welcome-section">About</a>
+            </li>
+            <li>
+                <a href="projects">Projects
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+<!-- END NAV -->    
+<!--START WELCOME SECTION-->
+    <section id="welcome-section" class="welcome-section">
       <h1>Hey, I'm Cory!</h1>
+      <p>an aspiring web developer</p>
     </section>
-  </div>
-
-  <div class="project-section">
-    <section id="projects">
-      <div class="project-title">
-      </div>  
+<!--END WELCOME SECTION-->
+<!--START PROJECTS SECTION-->
+<section id="projects" class="projects-section">
+    <h2 class="projects-section-header">
+        Here are all of my projects!
+    </h2> 
+<!--Animated Penguin-->
+    <div class="projects-grid">
+        <a href="https://codepen.io/deguzmancory/pen/KKRpojr?editors=1100" target="_blank" class="personal-project-title">
+            <img class="project-image" src="https://live.staticflickr.com/65535/52338561320_b6225df5d2_n.jpg" alt="Penguin Waving" />
+            <p class="project-title">
+                <span class="code">&lt;</span>
+                " Animated Penguin "
+                <span class="code">/></span>
+            </p>
+        </a>
+<!--City Skyline-->
+        <a href="https://codepen.io/deguzmancory/pen/poVJVEB?editors=1100" target="_blank" class="personal-project-title">
+            <img class="project-image" src="https://live.staticflickr.com/65535/52338578245_909f66a967_h.jpg" alt="city skyline" />
+            <p class="project-title">
+                <span class="code">&lt;</span>
+                " City Skyline "
+                <span class="code">/></span>
+            </p>
+        </a>
+<!--Tribute Page-->
+        <a href="https://codepen.io/deguzmancory/pen/yLjNjbm" target="_blank" class="personal-project-title">
+            <img class="project-image" src="https://live.staticflickr.com/65535/52338593375_561c9e27b4_z.jpg" alt="Dr. Norman Borlaug" />
+            <p class="project-title">
+                <span class="code">&lt;</span>
+                " Tribute Page "
+                <span class="code">/></span>
+            </p>
+        </a>
+<!--Product Landing Page-->
+        <a href="https://codepen.io/deguzmancory/pen/KKRpRoO" target="_blank" class="personal-project-title">
+            <img class="project-image" src="https://live.staticflickr.com/65535/52338472274_866a3b0e02_n.jpg" alt="Landing Page" />
+            <p class="project-title">
+                <span class="code">&lt;</span>
+                " Landing Page "
+                <span class="code">/></span>
+            </p>
+        </a>
+<!--Survey Form-->
+        <a href="https://codepen.io/deguzmancory/pen/LYmVmrj" target="_blank" class="personal-project-title">
+            <img class="project-image" src="https://live.staticflickr.com/65535/52338175776_5f6779be8e_z.jpg" alt="Survey Form" />
+            <p class="project-title project-tile">
+                <span class="code">&lt;</span>
+                " Survey Form "
+                <span class="code">/></span>
+            </p>
+        </a>
+    </div>
+    <a href="https://codepen.io/deguzmancory" class="btn btn-show-all" target="_blank">
+        "Show All"
+        <i class="fas fa-chevron-right"></i>
+    </a>
     </section>
-  </div> 
+<!--END PROJECTS SECTION--> 
+<!--START CONTACT SECTION-->
+<section id="contact" class="contact-section">
+    <div class="contact-section-header">
+        <h2>Let's work together...</h2>
+        <p>How do you take your coffee?</p>
+    </div>
+    <div class="contact-links">
+        <a href="https://www.facebook.com/cmdeguz" target="_blank" class="btn contact-details">
+            <i class="fab fa-facebook-square"></i>
+            " Facebook"
+        </a>
+        <a id="profile-link" href="https://github.com/deguzmancoryDH" target="_blank" class="btn contact-details">
+            <i class="fab fa-github"></i>
+            " GitHub"
+        </a>
+        <a href="https://www.instagram.com/dbrkcd_/" target="_blank" class="btn contact-details">
+            <i class="fab fa-instagram"></i>
+            " Instagram"
+        </a>
+        <a href="mailto:deguzmancory@ymail.com" class="btn contact-details">
+            <i class="fas fa-at"></i>
+            " Send a mail"
+        </a>
+        <a href="tel:808-445-7288" class="btn contact-details">
+            <i class="fas fa-mobile-alt"></i>
+            " Call me"
+        </a>
+    </div>
+</section>
+<!--END CONTACT SECTION-->
+<!--START FOOTER SECTION-->
+<p>" **This is a professional portfolio of projects that I have created over the entirety of my learning. "</p>
+<p> © Created for Cory DeGuzman</p>
 </body
+</html>
